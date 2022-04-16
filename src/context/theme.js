@@ -5,7 +5,7 @@ const ThemeContext = React.createContext();
 
 // Create a provider component
 function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
