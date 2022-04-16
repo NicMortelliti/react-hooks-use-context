@@ -6,20 +6,18 @@ import Profile from "./Profile";
 import { UserProvider } from "../context/user";
 
 // Import the Theme provider
-import { ThemeProvider, ThemeContext } from "../context/theme";
+import { ThemeContext } from "../context/theme";
 
 function App() {
-  const theme = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
-    <ThemeProvider>
-      <main className={theme}>
-        {/* Wrap components that need access to context data in the provider */}
-        <UserProvider>
-          <Header />
-          <Profile />
-        </UserProvider>
-      </main>
-    </ThemeProvider>
+    <main className={theme}>
+      {/* Wrap components that need access to context data in the provider */}
+      <UserProvider>
+        <Header />
+        <Profile />
+      </UserProvider>
+    </main>
   );
 }
 
