@@ -6,7 +6,7 @@ import Interests from "./Interests";
 
 function Profile({ theme }) {
   // Call useContext with our UserContext
-  const user = useContext(UserContext);
+  const {user} = useContext(UserContext);
 
   // Now, we can use the use object just like we would if it was passed as a prop
   console.log(user);
