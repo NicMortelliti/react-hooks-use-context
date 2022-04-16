@@ -12,13 +12,8 @@ function App() {
     <main className={theme}>
       {/* Wrap components that need access to context data in the provider */}
       <UserProvider>
-        <Header
-          theme={theme}
-          setTheme={setTheme}
-          user={user}
-          setUser={setUser}
-        />
-        <Profile theme={theme} user={user} />
+        <Header theme={theme} setTheme={setTheme} />
+        <Profile theme={theme} />
       </UserProvider>
     </main>
   );
