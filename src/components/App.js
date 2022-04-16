@@ -7,7 +7,6 @@ import { UserProvider } from "../context/user";
 
 function App() {
   const [theme, setTheme] = useState("dark");
-  const [user, setUser] = useState(null);
   return (
     <main className={theme}>
       {/* Wrap components that need access to context data in the provider */}
