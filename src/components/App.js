@@ -10,8 +10,16 @@ function App() {
   const [user, setUser] = useState(null);
   return (
     <main className={theme}>
-      <Header theme={theme} setTheme={setTheme} user={user} setUser={setUser} />
-      <Profile theme={theme} user={user} />
+      {/* Wrap components that need access to context data in the provider */}
+      <UserProvider>
+        <Header
+          theme={theme}
+          setTheme={setTheme}
+          user={user}
+          setUser={setUser}
+        />
+        <Profile theme={theme} user={user} />
+      </UserProvider>
     </main>
   );
 }
